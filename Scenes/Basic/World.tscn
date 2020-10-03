@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Tilemaps/World.tsx" type="TileSet" id=1]
+
+[node name="TileMap" type="TileMap"]
+scale = Vector2( 3, 3 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+centered_textures = true
+format = 1

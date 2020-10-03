@@ -1,0 +1,131 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Basic/ButtonFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Exit.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Tilemaps/World.tsx" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Basic/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scenes/Play.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Assets/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+outline_size = 4
+outline_color = Color( 0.529412, 0, 0.215686, 1 )
+use_mipmaps = true
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_size = 1
+outline_color = Color( 0.529412, 0, 0.215686, 1 )
+font_data = ExtResource( 6 )
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( -8, -432 )
+WORLD_ROTATION_SPEED = 0
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 3, 3 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_tile_origin = 1
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -458763, 2, 0, -458762, 1, 0, -458760, 1610612739, 0, -458759, 1610612739, 0, -458758, 1610612739, 0, -458757, 1610612739, 0, -458756, 1610612739, 0, -458755, 1610612739, 0, -458754, 1610612739, 0, -458753, 1610612739, 0, -524288, 1610612739, 0, -524287, 1610612739, 0, -524286, 1610612739, 0, -524285, 1610612739, 0, -524284, 1610612739, 0, -524283, 1610612739, 0, -524282, 1610612739, 0, -524281, 1610612739, 0, -524280, 1, 0, -524279, -1610612734, 0, -393227, -1073741823, 0, -393226, 1610612738, 0, -458744, -1073741822, 0, -458743, -1610612735, 0, -327691, -1610612733, 0, -393207, -1610612733, 0, -262155, -1610612733, 0, -327671, -1610612733, 0, -196619, -1610612733, 0, -262135, -1610612733, 0, -131083, -1610612733, 0, -131075, 2, 0, -131074, 1, 0, -131073, 3, 0, -196608, 3, 0, -196607, 1, 0, -196606, -1610612734, 0, -196599, -1610612733, 0, -65547, -1610612733, 0, -65539, -1073741823, 0, -65538, 1610612738, 0, -131071, -1073741822, 0, -131070, -1610612735, 0, -131063, -1610612733, 0, -11, -1610612733, 0, -3, -1610612733, 0, -65534, -1073741821, 0, -65527, -1610612733, 0, 65525, -1610612733, 0, 65533, -1610612733, 0, 2, -1073741821, 0, 9, -1610612733, 0, 131061, -1610612733, 0, 131069, -1073741823, 0, 131070, -1610612734, 0, 65537, 2, 0, 65538, -1610612735, 0, 65545, -1610612733, 0, 196597, -1610612733, 0, 196605, -1073741822, 0, 196606, 1610612737, 0, 131072, 1610612739, 0, 131073, 1610612737, 0, 131074, 1610612738, 0, 131081, -1610612733, 0, 262133, -1610612733, 0, 196617, -1610612733, 0, 327669, -1610612733, 0, 262153, -1610612733, 0, 393205, -1073741823, 0, 393206, -1610612734, 0, 327688, 2, 0, 327689, -1610612735, 0, 458741, -1073741822, 0, 458742, 1610612737, 0, 458743, 1610612739, 0, 458744, 1610612739, 0, 458745, 1610612739, 0, 458746, 1610612739, 0, 458747, 1610612739, 0, 458748, 1610612739, 0, 458749, 1610612739, 0, 458750, 1610612739, 0, 458751, 1610612739, 0, 393216, 1610612739, 0, 393217, 1610612739, 0, 393218, 1610612739, 0, 393219, 1610612739, 0, 393220, 1610612739, 0, 393221, 1610612739, 0, 393222, 1610612739, 0, 393223, 1610612739, 0, 393224, 1610612737, 0, 393225, 1610612738, 0 )
+
+[node name="Title" type="Label" parent="TileMap"]
+margin_left = -93.3333
+margin_top = -98.6667
+margin_right = 476.667
+margin_bottom = -18.6667
+rect_scale = Vector2( 0.33, 0.33 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.933333, 0, 0, 1 )
+text = "Pi's Escaped"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="TileMap"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -133.333
+margin_top = -40.0
+margin_right = 74.6667
+margin_bottom = 5.00001
+rect_scale = Vector2( 0.33, 0.33 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.933333, 0, 0, 1 )
+text = "YOU CANT"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="TileMap"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 58.6667
+margin_top = -40.0
+margin_right = 309.667
+margin_bottom = 8.0
+rect_scale = Vector2( 0.33, 0.33 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.933333, 0, 0, 1 )
+text = "WIN"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TileMap"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 85.3333
+margin_top = -18.6667
+margin_right = 160.333
+margin_bottom = 11.3333
+rect_scale = Vector2( 0.33, 0.33 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.933333, 0, 0, 1 )
+text = "(Quit)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="TileMap"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -18.6667
+margin_right = -37.0
+margin_bottom = 11.3333
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.933333, 0, 0, 1 )
+text = "(Quit)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Portal" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 0, 1.52588e-05 )
+scale = Vector2( 0.333333, 0.333333 )
+Target = "GameOver"
+TELEPORT_TIME = 3

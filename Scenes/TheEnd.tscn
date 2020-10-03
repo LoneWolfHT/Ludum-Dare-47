@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Basic/World.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Assets/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+outline_size = 4
+outline_color = Color( 0.529412, 0, 0.215686, 1 )
+use_mipmaps = true
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+outline_size = 4
+outline_color = Color( 0.529412, 0, 0.215686, 1 )
+use_mipmaps = true
+font_data = SubResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 0, -360 )
+amount = 30
+emission_shape = 2
+emission_rect_extents = Vector2( 600, 1 )
+direction = Vector2( 0, 1 )
+spread = 0.0
+gravity = Vector2( 0, 98 )
+initial_velocity = 412.7
+initial_velocity_random = 1.0
+scale_amount = 5.0
+scale_amount_random = 1.0
+color = Color( 0.866667, 0, 1, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -136.0
+margin_top = -168.0
+margin_right = 146.0
+margin_bottom = -90.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "The End"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 146.0
+margin_top = -480.0
+margin_right = 428.0
+margin_bottom = -402.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Or is it?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 56 )
+scale = Vector2( 1, 1 )
+WORLD_ROTATION_SPEED = 0
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( -1048561, 1073741825, 0, -1048560, 1073741825, 0, -1048559, 1073741824, 0, -983023, -2147483647, 0, -917487, -2147483647, 0, -851951, -2147483647, 0, -786418, -2147483646, 0, -786417, -2147483648, 0, -786416, -2147483648, 0, -786415, 1073741824, 0, -720883, -2147483646, 0, -720882, -2147483648, 0, -655348, -2147483646, 0, -655347, -2147483648, 0, -589813, -2147483646, 0, -589812, -2147483648, 0, -524278, -2147483646, 0, -524277, -2147483648, 0, -458743, -2147483646, 0, -458742, -2147483648, 0, -393208, -2147483646, 0, -393207, -2147483648, 0, -327673, -2147483646, 0, -327672, -2147483648, 0, -262138, -2147483646, 0, -262137, -2147483648, 0, -196603, -2147483646, 0, -196602, -2147483648, 0, -131068, -2147483646, 0, -131067, -2147483648, 0, -65533, -2147483646, 0, -65532, -2147483648, 0, 3, -2147483648, 0, 65539, -2147483648, 0, 196594, 536870913, 0, 196595, 536870913, 0, 196596, 536870913, 0, 196597, 536870913, 0, 196598, 536870913, 0, 196599, 536870913, 0, 196600, 536870913, 0, 196601, 536870913, 0, 196602, 536870913, 0, 196603, 536870913, 0, 196604, 536870913, 0, 196605, 536870913, 0, 196606, 536870913, 0, 196607, 536870913, 0, 131072, 536870913, 0, 131073, 536870913, 0, 131074, 536870913, 0, 131075, -2147483648, 0 )
