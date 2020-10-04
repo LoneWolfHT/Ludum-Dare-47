@@ -28,6 +28,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
+collision/safe_margin = 0.16
 script = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -38,6 +39,7 @@ position = Vector2( 0, 2 )
 shape = SubResource( 7 )
 
 [node name="Area" type="Area2D" parent="."]
+visible = false
 show_behind_parent = true
 
 [node name="Area" type="CollisionShape2D" parent="Area"]

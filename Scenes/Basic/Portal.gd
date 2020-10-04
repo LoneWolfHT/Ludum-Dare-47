@@ -8,6 +8,9 @@ var counter = 0
 var NEXT_SCENE = false
 
 func _on_Portal_area_entered(_Area2D):
+	if Target == "Node":
+		pass
+
 	NEXT_SCENE = true
 	get_node("Particles").amount = 40
 	get_node("Particles").color = ColorN("green")
