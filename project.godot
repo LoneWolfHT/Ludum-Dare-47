@@ -38,7 +38,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "AsepriteWizard", "vnen.tiled_importer" )
+enabled=PoolStringArray( "vnen.tiled_importer" )
 
 [input]
 

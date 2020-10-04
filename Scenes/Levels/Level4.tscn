@@ -5,15 +5,15 @@
 [ext_resource path="res://Scenes/Basic/World.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Basic/Arrow.tscn" type="PackedScene" id=4]
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://Assets/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 18
 outline_size = 1
 outline_color = Color( 0.529412, 0, 0.215686, 1 )
 use_mipmaps = true
-font_data = SubResource( 3 )
+font_data = SubResource( 1 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,36 +26,36 @@ Target = "TheEnd"
 
 [node name="Arrow" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( -56, -112 )
+frame = 1
 
 [node name="Arrow2" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 112, -109.333 )
 rotation = 1.57079
-frame = 1
 
 [node name="Arrow3" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 37.3333, 101.333 )
 rotation = 3.14159
-frame = 1
 
 [node name="Arrow4" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( -18.6667, 104 )
 rotation = 4.71238
+frame = 1
 
 [node name="Arrow5" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( -18.6667, 72 )
 rotation = 6.28318
-frame = 1
 
 [node name="Arrow6" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 37.3333, 74.6667 )
 rotation = 7.85397
+frame = 1
 
 [node name="Label" type="Label" parent="TileMap"]
 margin_left = -112.0
 margin_top = 64.0
 margin_right = 128.0
 margin_bottom = 112.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "You Will Never Escape"
 align = 1

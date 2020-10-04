@@ -17,29 +17,27 @@ Target = "Levels/Level4"
 
 [node name="Arrow" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 45.3333, 1.33333 )
-frame = 1
 
 [node name="Arrow2" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 93.3333, 0 )
 rotation = -4.71238
-frame = 1
 
 [node name="Arrow6" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 93.3333, 77.3333 )
 rotation = -1.57079
-frame = 1
 
 [node name="Arrow3" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 82.6667, -162.667 )
 rotation = -3.14159
+frame = 1
 
 [node name="Arrow4" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( -157.333, -168 )
 rotation = -4.71238
+frame = 1
 
 [node name="Arrow5" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( -133.333, 77.3333 )
 rotation = -6.28318
-frame = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
