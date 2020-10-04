@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BeatLeft.ogg-289e06df8b72d60ce905e4777c0ec59a.oggstr"
+
+[deps]
+
+source_file="res://Audio/BeatLeft.ogg"
+dest_files=[ "res://.import/BeatLeft.ogg-289e06df8b72d60ce905e4777c0ec59a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

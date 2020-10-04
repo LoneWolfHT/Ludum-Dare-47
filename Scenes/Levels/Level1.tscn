@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Basic/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Basic/Portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Basic/Arrow.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Assets/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+outline_size = 3
+outline_color = Color( 0.529412, 0, 0.215686, 1 )
+use_mipmaps = true
+font_data = SubResource( 3 )
 
 [node name="Level1" type="Node2D"]
 
@@ -13,22 +23,41 @@ tile_data = PoolIntArray( -524297, 2, 0, -524296, 1, 0, -524295, 1, 0, -524294, 
 
 [node name="Arrow" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 82.6667, -168 )
+frame = 1
 
 [node name="Arrow2" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( -72, -109.333 )
 rotation = 1.5708
+frame = 1
 
 [node name="Arrow3" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 173.333, 120 )
 rotation = -3.14159
+frame = 1
 
 [node name="Arrow4" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 66.6667, 24 )
 rotation = -3.14159
+frame = 1
+
+[node name="Label" type="Label" parent="TileMap"]
+margin_left = -82.6667
+margin_top = -194.667
+margin_right = 434.333
+margin_bottom = -113.667
+rect_scale = Vector2( 0.33, 0.33 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "LMB/RMB or Q/E or Shift+A/D
+To control the looping"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 648, 104 )
-scale = Vector2( 1, 1 )
+position = Vector2( 648, 120 )
 
 [node name="Portal" parent="." instance=ExtResource( 2 )]
 position = Vector2( 640, 592 )

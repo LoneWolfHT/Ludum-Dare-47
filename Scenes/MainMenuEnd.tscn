@@ -127,64 +127,54 @@ __meta__ = {
 position = Vector2( 8, 16 )
 scale = Vector2( 0.33, 0.33 )
 Target = "GameOver"
-TELEPORT_TIME = 3
+TELEPORT_TIME = 3.0
 
 [node name="Portal2" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 69.3333, -152 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal3" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 85.3333, -64 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal4" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( -74.6666, -61.3333 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal5" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 69.3333, 45.3333 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal6" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 29.3333, 74.6667 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal7" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( -69.3333, 66.3333 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal8" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( -133.333, 10.3333 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal9" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( -200, -2.33333 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal10" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 184, -2.66667 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3
 
 [node name="Portal11" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( -21.3333, 144 )
 scale = Vector2( 0.33, 0.33 )
 Target = "None"
-TELEPORT_TIME = 3

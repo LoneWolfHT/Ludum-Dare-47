@@ -2,7 +2,7 @@ extends Area2D
 
 
 export (String) var Target = "MainMenu"
-export (int) var TELEPORT_TIME = 1.5
+export (float) var TELEPORT_TIME = 1.0
 
 var counter = 0
 var NEXT_SCENE = false
